@@ -278,7 +278,7 @@ int main(){
 																									}
 																								} while (eleccion != '1' && eleccion != '2' && eleccion != '3' && eleccion != '4');
 																								break;
-																							case '3' :}
+																							case '3' :
 																								vida = 100;
 																								cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
 																								cout << "Mientras regresabas encontraste a un grupo de soldados que buscaban sobrevivientes ellos curaron tus heridas y te llevaran a un lugar seguro...Haz sobrevivido";
@@ -294,7 +294,40 @@ int main(){
 																					
 																					break;
 																				case '3' :
-																					cout << "Mirar por la ventana";
+																					cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																					cout << "Esta siendo complicado pero poco a poco logras avanzar a costa de hacer mucho ruido, logras ver que enfrente de ti un grupo de sobrevivientes te miran mientras que un grupo de zombies se acercan";
+																					do{
+																						cout << "\n¿Que quieres hacer?" << endl;
+	
+																						cout <<  "1. Bajar y hablar con los sobrevivientes" << endl;
+																						cout <<  "2. Tratar de huir corriendo" << endl;
+																						cout <<  "3. Tratar de huir en carro" << endl;
+																						cout <<  "4. Cerrar" << endl;
+																						cin >> eleccion;
+	
+																						switch (eleccion){
+																							case '1' : 
+																								cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																								cout << "Logras acercarte cuidadosamente y jefe del grupo dialoga contigo, llegan a un acuerdo y ahora puedes estar con ellos...Ahora estas a salvo..." << endl;
+																								break;
+																							case '2' : 
+																								vida = 0;
+																								cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																								cout << "Oh no... El grupo de zombies llego demasiado rapido y lograron alcanzarte devorandote sin piedad... Haz muerto...";
+																								break;
+																							case '3' :
+																								vida = 45;
+																								cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																								cout << "Al grupo de sobrevivientes no les gusto eso y te atacaron causandote algunas heridas, pero tuviste suerte y encontraste un refugio en tu huida... Ahora estas a salvo";
+																								break;
+																							case '4' : 
+																								cout << "Saliendo del programa";
+																								break;
+																							default :
+																								cout << "La opcion que elejiste no existe.";
+																								break;
+																						}
+																				} while (eleccion != '1' && eleccion != '2' && eleccion != '3' && eleccion != '4');
 																					break;
 																				case '4' : 
 																					cout << "Saliendo del programa...";
@@ -306,7 +339,41 @@ int main(){
 																		} while (eleccion != '1' && eleccion != '2' && eleccion != '3' && eleccion != '4');
 																		break;
 																	case '3' :
-																		cout << "Mirar por la ventana";
+																		vida = 70;
+																		cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																		cout << "La herida que tienes empeoro un poco y perdiste algo de sangre, pero sigues avanzando. Haz llegado a una bifurcación en el camino, ahora tienes que elejir...";
+																		do{
+																			cout << "\n¿Que quieres hacer?" << endl;
+	
+																			cout <<  "1. Ir por el lado derecho" << endl;
+																			cout <<  "2. Ir por el lado izquierdo" << endl;
+																			cout <<  "3. Tratar de curar tu herida" << endl;
+																			cout <<  "4. Cerrar" << endl;
+																			cin >> eleccion;
+	
+																			switch (eleccion){
+																				case '1' : 
+																					cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																					cout << "Parece que ha sido una buena eleccion, el camino esta despejado y observas a lo lejos un refugio tardaras un poco, pero puedes sentirte a salvo... Haz sobrevivido" << endl;
+																					break;
+																				case '2' : 
+																					vida = 5;
+																					cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																					cout << "El camino tenia un poco de obstaculos y una gran orda de zombies logro acercarse dejandote muy mal herido, sin embargo, un grupo de rescate llego justo a tiempo para salvarte. Ellos te llevaran a un lugar seguro y curaran todas tus heridas...Has sobrevivido";
+																					break;
+																				case '3' :
+																					vida = 0;
+																					cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																					cout << "Que mala suerte, una gran orda de zombies se acerco a ti mientras curabas tu herida dejandote encerrado en el carro. Poco a poco lograron entrar y no pudiste hacer nada... Haz muerto...";
+																					break;
+																				case '4' : 
+																					cout << "Saliendo del programa...";
+																					break;
+																				default :
+																					cout << "La opcion que elejiste no existe.";
+																					break;
+																			}
+																		} while (eleccion != '1' && eleccion != '2' && eleccion != '3' && eleccion != '4');
 																		break;
 																	case '4' : 
 																		cout << "Saliendo del programa...";
@@ -319,7 +386,8 @@ int main(){
 				
 															break;
 														case '2' : 
-															cout << "Mirar por la ventana";
+															cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+															cout << "Se esta buscando medicamneto";
 															break;
 														case '3' :
 															cout << "Mirar por la ventana";
