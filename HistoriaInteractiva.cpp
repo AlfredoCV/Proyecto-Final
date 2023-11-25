@@ -168,7 +168,7 @@ int main(){
 																						cout << "\n¿Que quieres hacer?" << endl;
 	
 																						cout <<  "1. Buscar medicamento" << endl;
-																						cout <<  "2. Buscar un refugio" << endl;
+																						cout <<  "2. Ir al supermercado" << endl;
 																						cout <<  "3. Bloquear las entradas de tu casa" << endl;
 																						cout <<  "4. Cerrar" << endl;
 																						cin >> eleccion;
@@ -387,7 +387,98 @@ int main(){
 															break;
 														case '2' : 
 															cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
-															cout << "Se esta buscando medicamneto";
+															cout << "Puede que la herida no sea algo grave, pero es mejor prevenir, recuerdas que tienes algo que puede ayudar en el botiquin que se encuentra en la sala, pero no estas seguro...";
+															do{
+																cout << "\n¿Que quieres hacer?" << endl;
+	
+																cout <<  "1. Ir a buscar a la sala" << endl;
+																cout <<  "2. Buscar una farmacia" << endl;
+																cout <<  "3. Ir a buscar al supermercado" << endl;
+																cout <<  "4. Cerrar" << endl;
+																cin >> eleccion;
+	
+																switch (eleccion){
+																	case '1' : 
+																		cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																		cout << "Mientras caminas a la sala escuchas de nuevo ruidos que provienen de ahi, ya te haz enfrentado una vez, pero tienes que decidir..." << endl;
+																		do{
+																			cout << "\n¿Que quieres hacer?" << endl;
+	
+																			cout <<  "1. Entrar y atacar con los punos" << endl;
+																			cout <<  "2. Buscar un objeto que sirva como arma" << endl;
+																			cout <<  "3. Esperar a que no haya ruido" << endl;
+																			cout <<  "4. Cerrar" << endl;
+																			cin >> eleccion;
+	
+																			switch (eleccion){
+																				case '1' : 
+																					vida = 0;
+																					cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																					cout << "Esta vez no tuviste suerte, el ruido era causado por varios zombies que te devoraron...Haz muerto..." << endl;
+																					break;
+																				case '2' : 
+																					cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																					cout << "No estabas preparado para enfrentar esto aun asi logras conseguir algo...";
+																					do{
+																						cout << "\n¿Que quieres hacer?" << endl;
+	
+																						cout <<  "1. Agarrar una martillo" << endl;
+																						cout <<  "2. Romper una botella" << endl;
+																						cout <<  "3. Agarrar una varilla" << endl;
+																						cout <<  "4. Cerrar" << endl;
+																						cin >> eleccion;
+	
+																						switch (eleccion){
+																							case '1' : 
+																								vida = 50;
+																								cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																								cout << "El martillo fue buena opcion apesar de que eran varios zombies pudiste acabar con ellos acosta de algunas heridas..." << endl;
+																								break;
+																							case '2' : 
+																								vida = 0;
+																								cout << "\t\t\t\t\t\t\t" << nombre << ' ' << vida << " HP" << endl;
+																								cout << "Eso no fue una buena idea la botella te corto y atrajo a los zombies y no pudiste hacer nada con tu mano herida... Haz muerto...";
+																								break;
+																							case '3' :
+																								cout << "Buena decision, el tamaño de la varilla te permitio atacar sin acercarte demasiado. Ahora puedes tomar el medicamento...";
+																								break;
+																							case '4' : 
+																								cout << "Saliendo del programa...";
+																								break;
+																							default :
+																								cout << "La opcion que elejiste no existe.";
+																								break;
+																						}
+																					} while (eleccion != '1' && eleccion != '2' && eleccion != '3' && eleccion != '4');
+																					break;
+																				case '3' :
+																					cout << "Mirar por la ventana";
+																					break;
+																				case '4' : 
+																					cout << "Saliendo del programa...";
+																					break;
+																				default :
+																					cout << "La opcion que elejiste no existe.";
+																					break;
+																			}
+																		} while (eleccion != '1' && eleccion != '2' && eleccion != '3' && eleccion != '4');
+							
+				
+																		break;
+																	case '2' : 
+																		cout << "Mirar por la ventana";
+																		break;
+																	case '3' :
+																		cout << "Mirar por la ventana";
+																		break;
+																	case '4' : 
+																		cout << "Salir";
+																		break;
+																	default :
+																		cout << "La opcion que elejiste no existe.";
+																		break;
+																}
+															} while (eleccion != '1' && eleccion != '2' && eleccion != '3' && eleccion != '4');
 															break;
 														case '3' :
 															cout << "Mirar por la ventana";
