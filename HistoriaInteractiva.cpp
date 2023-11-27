@@ -4,13 +4,23 @@ using namespace std;
 
 int main(){
 	
-	char nombre[15];
+	char nombre[100];
 	char eleccion;
 	int vida = 100;
+	int numC = 0;
 	 
 	cout << "***********BIENVENIDO AL APOCALIPSIS ZOMBIE***********" << endl;
-	cout << "Ingresa un nombre de usuario (Maximo 15 caracteres)" << endl;
-	cin.getline(nombre, 15, '\n');
+	do{
+		cout << "Ingresa un nombre de usuario (Maximo 15 caracteres)" << endl;
+		
+		cin.getline(nombre, 100, '\n');
+		numC = strlen(nombre);
+		
+		if (numC > 15){
+			cout << "El nombre es demasiado largo. Introduzca uno nuevo\n" << endl;
+		} 
+		
+	} while (numC > 15);
 	cout << endl;
 	
 	
